@@ -1,9 +1,9 @@
 #pragma once
-#include "IFunction.h"
+#include "PolynomFunction.h"
 class LineFunction :
-	public IFunction
+	public PolynomFunction
 {
-	virtual double GetValue(double x);
+protected:
 public:
 	LineFunction();
 	~LineFunction();
