@@ -3,9 +3,8 @@
 class LineFunction :
 	public PolynomFunction
 {
-protected:
 public:
-	LineFunction();
-	~LineFunction();
+	LineFunction() : PolynomFunction(2) {};
+	~LineFunction() {};
 };
 

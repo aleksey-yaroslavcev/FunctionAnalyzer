@@ -86,7 +86,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="IFunction.cpp" />
-    <ClCompile Include="LineFunction.cpp" />
     <ClCompile Include="LogFunction.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PolynomFunction.cpp" />
