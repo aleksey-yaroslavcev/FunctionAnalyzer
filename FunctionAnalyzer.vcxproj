@@ -116,13 +116,14 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CubePolynomFunction.h" />
     <ClInclude Include="GeneratedFiles\ui_FunctionAnalyzer.h" />
     <ClInclude Include="IFunction.h" />
     <ClInclude Include="LineFunction.h" />
     <ClInclude Include="LogFunction.h" />
     <ClInclude Include="PolynomFunction.h" />
     <ClInclude Include="SinFunction.h" />
-    <ClInclude Include="SquarePolynomFuctions.h" />
+    <ClInclude Include="SquarePolynomFuction.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="FunctionAnalyzer.qrc">
