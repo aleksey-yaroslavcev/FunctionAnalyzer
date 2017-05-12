@@ -7,6 +7,7 @@ public:
 
 	CubePolynomFunction() :PolynomFunction(3)
 	{
+		_description = QApplication::tr("Cube polynomial function");
 	}
 
 	~CubePolynomFunction()

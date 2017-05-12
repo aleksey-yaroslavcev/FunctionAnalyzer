@@ -21,9 +21,6 @@ FunctionAnalyzer::FunctionAnalyzer(QWidget *parent)
 {
 	ui.setupUi(this);
 
-	_func1=new LineFunction;
-	_func2=new LineFunction;
-
 	ui.plot->setCanvas(new QwtPlotCanvas);
 	_curve = new QwtPlotCurve;
 	_data = new QwtPointSeriesData;
@@ -37,6 +34,15 @@ FunctionAnalyzer::FunctionAnalyzer(QWidget *parent)
 	ui.plot->canvas()->setCursor(Qt::ArrowCursor);
 	ui.plot->canvas()->setContentsMargins(0, 0, 0, 0);
 	ui.plot->canvas()->installEventFilter(this);
+
+	_functionPool.push_back(new LineFunction);
+	_functionPool.push_back(new SquarePolynomFuction);
+	_functionPool.push_back(new CubePolynomFunction);
+	_functionPool.push_back(new LogFunction);
+	_functionPool.push_back(new SinFunction);
+
+	FillFunctionsCombo(ui.cobFunc1);
+	FillFunctionsCombo(ui.cobFunc2);
 }
 
 bool FunctionAnalyzer::eventFilter(QObject *object, QEvent *event){
@@ -59,4 +65,11 @@ bool FunctionAnalyzer::eventFilter(QObject *object, QEvent *event){
 		break;
 	}
 	return QObject::eventFilter(object, event);
+}
+
+void FunctionAnalyzer::FillFunctionsCombo(QComboBox *cob){
+	cob->clear();
+	cob->insertItem(0,QString("----"));
+	for (unsigned int i = 0; i < _functionPool.size(); ++i)
+		cob->insertItem(i+1,_functionPool.at(i)->GetFunctionDescription());
 }

@@ -21,12 +21,13 @@ public:
 
 private:
 
-	IFunction* _func1;
-	IFunction* _func2;
+	QVector<IFunction*> _functionPool;
 
 	QwtPlotCurve* _curve;
 	QwtPointSeriesData* _data;
 	QwtPlotGrid* _grid;
 
 	Ui::FunctionAnalyzerClass ui;
+
+	void FillFunctionsCombo(QComboBox *cob);
 };

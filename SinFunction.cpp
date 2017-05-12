@@ -1,10 +1,12 @@
 #include "SinFunction.h"
-
+#include "QApplication"
 
 SinFunction::SinFunction()
 {
 	_params["magn"] = 1;
 	_params["phase"] = 0;
+	_params["frequency"] = 1;
+	_description = QApplication::tr("Sine function");
 }
 
 
@@ -13,7 +15,5 @@ SinFunction::~SinFunction()
 }
 
 double SinFunction::GetValue(double x){
-	double magn = _params["magn"];
-	double phase = _params["phase"];
-	return magn*sin(x + phase);
+	return _params["magn"] * sin(_params["frequency"]*x + _params["phase"]);
 }

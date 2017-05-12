@@ -65,23 +65,23 @@
   </Class>
   <Class Name="FunctionAnalyzer">
     <Position X="4.25" Y="0.5" Width="2.25" />
-    <AssociationLine Name="ui" Type="Ui::FunctionAnalyzerClass">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.685" Y="0.11" />
-      </MemberNameLabel>
-    </AssociationLine>
     <AssociationLine Name="_func1" Type="IFunction" ManuallyRouted="true">
       <Path>
         <Point X="4.25" Y="1.535" />
         <Point X="2.5" Y="1.535" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.06" Y="1.068" Height="0.182" Width="0.649" />
+        <Position X="0.05" Y="0.047" Height="0.182" Width="0.649" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="_func2" Type="IFunction">
       <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="1.068" Y="0.06" Height="0.182" Width="0.646" />
+        <Position X="0.016" Y="0.081" Height="0.182" Width="0.646" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ui" Type="Ui::FunctionAnalyzerClass">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.029" Y="0.037" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -89,9 +89,9 @@
       <FileName>FunctionAnalyzer.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="ui" />
       <Field Name="_func1" />
       <Field Name="_func2" />
+      <Field Name="ui" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Ui::FunctionAnalyzerClass">

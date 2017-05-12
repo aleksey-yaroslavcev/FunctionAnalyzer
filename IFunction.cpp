@@ -1,15 +1,6 @@
 #include "IFunction.h"
 
 
-IFunction::IFunction()
-{
-}
-
-
-IFunction::~IFunction()
-{
-}
-
 unsigned int IFunction::GetFunctionValues(QVector<double>& array, double x1, double x2, double step){
 	int arraySz;
 
