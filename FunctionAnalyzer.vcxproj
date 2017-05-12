@@ -85,6 +85,7 @@
     <ClCompile Include="LineFunction.cpp" />
     <ClCompile Include="LogFunction.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SinFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="FunctionAnalyzer.h">
@@ -115,6 +116,7 @@
     <ClInclude Include="IFunction.h" />
     <ClInclude Include="LineFunction.h" />
     <ClInclude Include="LogFunction.h" />
+    <ClInclude Include="SinFunction.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="FunctionAnalyzer.qrc">
