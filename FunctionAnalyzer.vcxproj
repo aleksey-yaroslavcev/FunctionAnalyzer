@@ -83,6 +83,7 @@
     </ClCompile>
     <ClCompile Include="IFunction.cpp" />
     <ClCompile Include="LineFunction.cpp" />
+    <ClCompile Include="LogFunction.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +114,7 @@
     <ClInclude Include="GeneratedFiles\ui_FunctionAnalyzer.h" />
     <ClInclude Include="IFunction.h" />
     <ClInclude Include="LineFunction.h" />
+    <ClInclude Include="LogFunction.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="FunctionAnalyzer.qrc">
