@@ -3,6 +3,7 @@
 class SinFunction :
 	public IFunction
 {
+protected:
 	virtual double GetValue(double x);
 public:
 	SinFunction();
