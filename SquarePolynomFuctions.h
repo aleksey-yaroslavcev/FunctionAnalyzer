@@ -4,7 +4,7 @@ class SquarePolynomFuctions :
 	public PolynomFunction
 {
 public:
-	SquarePolynomFuctions() :PolynomFunction(3) {};
+	SquarePolynomFuctions() :PolynomFunction(2) {};
 	~SquarePolynomFuctions() {};
 };
 
