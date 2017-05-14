@@ -8,46 +8,57 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LineFunction">
-    <Position X="0.75" Y="6.5" Width="1.75" />
+    <Position X="2.75" Y="6.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>LineFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LogFunction">
-    <Position X="2.75" Y="4" Width="1.5" />
+    <Position X="3" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>LogFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SinFunction">
-    <Position X="4.75" Y="4" Width="1.5" />
+    <Position X="6.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>SinFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PolynomFunction">
-    <Position X="0.75" Y="4" Width="1.75" />
+    <Position X="4.75" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAACIAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>PolynomFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SquarePolynomFuction">
-    <Position X="2.75" Y="6.5" Width="2" />
+    <Position X="4.75" Y="6.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SquarePolynomFuction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CubePolynomFunction">
-    <Position X="5" Y="6.5" Width="2" />
+    <Position X="7" Y="6.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAA=</HashCode>
       <FileName>CubePolynomFunction.h</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="XLogXFunction">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAIAIAAEAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>XLogXFunction.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_line" />
+      <Field Name="_log" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
