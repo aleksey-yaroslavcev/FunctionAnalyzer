@@ -1,104 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="IFunction">
-    <Position X="0.75" Y="0.5" Width="1.75" />
+    <Position X="0.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAQEAAAAAAAAAAIBAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAIgAAAAAUEAAAAAAAAAAIBAAAAAAAAAIAAAA=</HashCode>
       <FileName>IFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LineFunction">
-    <Position X="0.75" Y="6" Width="1.75" />
+    <Position X="0.75" Y="6.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>LineFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LogFunction">
-    <Position X="2.75" Y="3.5" Width="1.5" />
+    <Position X="2.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>LogFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SinFunction">
-    <Position X="4.75" Y="3.5" Width="1.5" />
+    <Position X="4.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>SinFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PolynomFunction">
-    <Position X="0.75" Y="3.5" Width="1.75" />
+    <Position X="0.75" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAACIAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>PolynomFunction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SquarePolynomFuction">
-    <Position X="2.75" Y="6" Width="2" />
+    <Position X="2.75" Y="6.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SquarePolynomFuction.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CubePolynomFunction">
-    <Position X="5" Y="6" Width="2" />
+    <Position X="5" Y="6.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAA=</HashCode>
       <FileName>CubePolynomFunction.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Ui_FunctionAnalyzerClass">
-    <Position X="7.75" Y="2" Width="2" />
-    <TypeIdentifier>
-      <HashCode>YAEAAIAAAIEAABAACAAQAAAAAwQQIAQAAAAAAECAhAA=</HashCode>
-      <FileName>GeneratedFiles\ui_FunctionAnalyzer.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Ui_DialogSetPlotParams">
-    <Position X="10" Y="0.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>wQAAAIEBAAAAgBAAAAAAAAAAQQQAoAEAACAABEAABAA=</HashCode>
-      <FileName>GeneratedFiles\ui_DialogSetPlotParams.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="FunctionAnalyzer">
-    <Position X="4.25" Y="0.5" Width="2.25" />
-    <AssociationLine Name="_func1" Type="IFunction" ManuallyRouted="true">
-      <Path>
-        <Point X="4.25" Y="1.535" />
-        <Point X="2.5" Y="1.535" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.05" Y="0.047" Height="0.182" Width="0.649" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="_func2" Type="IFunction">
-      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
-        <Position X="0.016" Y="0.081" Height="0.182" Width="0.646" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="ui" Type="Ui::FunctionAnalyzerClass">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.029" Y="0.037" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAEAAAAJAAAAAAAAAAAAAAAAAAAAIAAAE=</HashCode>
-      <FileName>FunctionAnalyzer.h</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_func1" />
-      <Field Name="_func2" />
-      <Field Name="ui" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Ui::FunctionAnalyzerClass">
-    <Position X="7.75" Y="0.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GeneratedFiles\ui_FunctionAnalyzer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -1,11 +1,9 @@
 #include "LogFunction.h"
-#include <QApplication>
-
 
 LogFunction::LogFunction()
 {
 	_params["a"] = 1;
-	_description = QApplication::tr("Logarifmic function");
+	_description = "Logarifmic function";
 }
 
 
