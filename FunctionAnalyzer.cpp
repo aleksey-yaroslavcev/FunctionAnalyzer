@@ -1,16 +1,31 @@
-#include "FunctionAnalyzer.h"
+// FunctionAnalyzer.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
 #include "IFunction.h"
-#include "SinFunction.h"
-#include "LogFunction.h"
+#include "PolynomFunction.h"
 #include "LineFunction.h"
 #include "SquarePolynomFuction.h"
 #include "CubePolynomFunction.h"
+#include "LogFunction.h"
+#include "SinFunction.h"
+#include "XLogXFunction.h"
 
-FunctionAnalyzer::FunctionAnalyzer(QWidget *parent)
-	: QMainWindow(parent)
+#include <iostream>
+
+int main(int argc, char *argv[])
 {
-	ui.setupUi(this);
+	std::vector<IFunction*> objectPool;
 
-	_fuctions.push_back(new LineFunction);
-	_fuctions.push_back(new LineFunction);
+	objectPool.push_back(new LineFunction);
+	objectPool.push_back(new SquarePolynomFuction);
+	objectPool.push_back(new CubePolynomFunction);
+	objectPool.push_back(new LogFunction);
+	objectPool.push_back(new SinFunction);
+	objectPool.push_back(new XLogXFunction);
+
+	for (unsigned int i = 0; i < objectPool.size(); ++i)
+		std::cout << objectPool.at(i)->GetFunctionDescription() << std::endl;
+
+	return 0;
 }

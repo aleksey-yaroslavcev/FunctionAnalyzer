@@ -7,6 +7,7 @@ public:
 
 	CubePolynomFunction() :PolynomFunction(3)
 	{
+		_description = "Cube polynomial function";
 	}
 
 	~CubePolynomFunction()

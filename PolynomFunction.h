@@ -5,8 +5,8 @@ class PolynomFunction :
 {
 protected:
 	unsigned int _order;
-	virtual double GetValue(double x);
 public:
+	virtual double GetValue(double x);
 	PolynomFunction(unsigned int order=0);
 	~PolynomFunction();
 };

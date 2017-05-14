@@ -1,9 +1,9 @@
 #include "LogFunction.h"
 
-
 LogFunction::LogFunction()
 {
 	_params["a"] = 1;
+	_description = "Logarifmic function";
 }
 
 

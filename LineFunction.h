@@ -4,7 +4,14 @@ class LineFunction :
 	public PolynomFunction
 {
 public:
-	LineFunction() : PolynomFunction(1) {};
-	~LineFunction() {};
+
+	LineFunction() : PolynomFunction(1) 
+	{ 
+		_description = "Line function";
+	}
+	
+	~LineFunction() 
+	{
+	}
 };
 
