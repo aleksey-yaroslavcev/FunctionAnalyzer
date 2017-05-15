@@ -7,7 +7,7 @@ public:
 
 	SquarePolynomFuction() :PolynomFunction(2) 
 	{
-		_description = QApplication::tr("Square polynomial function");
+		_description = tr("Square polynomial function");
 	}
 
 	~SquarePolynomFuction() 

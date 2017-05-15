@@ -1,12 +1,11 @@
 #include "PolynomFunction.h"
-#include <QApplication>
 
 PolynomFunction::PolynomFunction(unsigned int order)
 {
 	_order = order;
 	for (unsigned int i = 0; i <= _order; i++)
 		_params[QString("a%1").arg(i)] = 1;
-	_description = QApplication::tr("Polynomial function of order %1").arg(_order);
+	_description = tr("Polynomial function of order %1").arg(_order);
 }
 
 

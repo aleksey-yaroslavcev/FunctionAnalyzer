@@ -5,6 +5,7 @@
 #include "LineFunction.h"
 #include "SquarePolynomFuction.h"
 #include "CubePolynomFunction.h"
+#include "XLogXFunction.h"
 
 #include "DialogSetPlotParams.h"
 
@@ -40,6 +41,7 @@ FunctionAnalyzer::FunctionAnalyzer(QWidget *parent)
 	_functionPool.push_back(new CubePolynomFunction);
 	_functionPool.push_back(new LogFunction);
 	_functionPool.push_back(new SinFunction);
+	_functionPool.push_back(new XLogXFunction);
 
 	FillFunctionsCombo(ui.cobFunc1);
 	FillFunctionsCombo(ui.cobFunc2);

@@ -1,12 +1,11 @@
 #include "SinFunction.h"
-#include "QApplication"
 
 SinFunction::SinFunction()
 {
 	_params["magn"] = 1;
 	_params["phase"] = 0;
 	_params["frequency"] = 1;
-	_description = QApplication::tr("Sine function");
+	_description = tr("Sine function");
 }
 
 

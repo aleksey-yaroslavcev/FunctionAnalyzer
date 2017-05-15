@@ -7,7 +7,7 @@ public:
 
 	LineFunction() : PolynomFunction(1) 
 	{ 
-		_description = QApplication::tr("Line function");
+		_description = tr("Line function");
 	}
 	
 	~LineFunction() 
