@@ -4,11 +4,11 @@
 #include <QList>
 #include <QString>
 #include <QMap>
-#include <QObject>
+#include <QCoreApplication>
 
-class IFunction: QObject
+class IFunction
 {
-	Q_OBJECT
+	Q_DECLARE_TR_FUNCTIONS(IFunction);
 
 protected:
 	QMap<QString, double> _params;
