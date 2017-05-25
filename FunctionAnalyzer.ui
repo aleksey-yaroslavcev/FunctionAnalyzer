@@ -18,8 +18,8 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <layout class="QFormLayout" name="func1Layout">
-        <item row="0" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="func1Layout">
+        <item>
          <widget class="QLabel" name="label">
           <property name="text">
            <string>Function 1</string>
@@ -29,21 +29,8 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0" colspan="2">
+        <item>
          <widget class="QComboBox" name="cobFunc1"/>
-        </item>
-        <item row="2" column="0" colspan="2">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
        </layout>
       </item>
@@ -55,8 +42,8 @@
        </widget>
       </item>
       <item>
-       <layout class="QFormLayout" name="func2Layout">
-        <item row="0" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="func2Layout">
+        <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
            <string>Function2</string>
@@ -66,21 +53,8 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0" colspan="2">
+        <item>
          <widget class="QComboBox" name="cobFunc2"/>
-        </item>
-        <item row="2" column="0" colspan="2">
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
        </layout>
       </item>

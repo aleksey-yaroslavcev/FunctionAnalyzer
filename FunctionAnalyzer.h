@@ -9,6 +9,7 @@ class IFunction;
 class QwtPlotCurve;
 class QwtPointSeriesData;
 class QwtPlotGrid;
+class QGroupBox;
 
 class FunctionAnalyzer : public QMainWindow
 {
@@ -19,9 +20,13 @@ public:
 	FunctionAnalyzer(QWidget *parent = Q_NULLPTR);
 	virtual bool eventFilter(QObject *, QEvent *);
 
+public slots:
+	void on_cobFunc1_currentIndexChanged(int);
+	void on_cobFunc2_currentIndexChanged(int);
 private:
 
 	QVector<IFunction*> _functionPool;
+	QVector<QGroupBox*> _grpBoxesF1, _grpBoxesF2;
 
 	QwtPlotCurve* _curve;
 	QwtPointSeriesData* _data;
