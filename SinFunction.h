@@ -1,11 +1,11 @@
 #pragma once
 #include "IFunction.h"
-class SinFunction :
-	public IFunction
+class SinFunction : public IFunction
 {
 public:
-	virtual double GetValue(double x);
-	SinFunction();
-	~SinFunction();
+    SinFunction();
+    ~SinFunction() override;
+
+    double value(double x) override;
 };
 

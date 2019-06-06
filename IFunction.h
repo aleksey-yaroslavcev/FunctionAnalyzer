@@ -2,23 +2,23 @@
 
 #include <vector>
 #include <list>
-#include <string>
-#include <map>
+#include <QString>
+#include <QMap>
 
 class IFunction
 {
-protected:
-	std::map<std::string, double> _params;
-	std::string _description;
-
 public:
-	IFunction(){};
-	~IFunction(){};
-	unsigned int GetFunctionValues(std::vector<double>& array, double x1, double x2, double step);
-	virtual double GetValue(double x) = 0;
+    IFunction();
+    virtual ~IFunction();
+    std::size_t values(std::vector<double>& array, double x1, double x2, double step);
+    virtual double value(double x) = 0;
 
-	std::list<std::string> GetParamsList();
-	void SetParam(std::string name, double val){ _params[name] = val; };
-	std::string GetFunctionDescription(){ return _description; };
+    std::list<std::string> params();
+    void setParam(std::string name, double val);
+    std::string description();
+
+protected:
+    QMap<QString, double> _params;
+    QString _description;
 };
 

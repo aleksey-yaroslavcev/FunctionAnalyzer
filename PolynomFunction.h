@@ -1,13 +1,14 @@
 #pragma once
 #include "IFunction.h"
 class PolynomFunction :
-	public IFunction
+    public IFunction
 {
-protected:
-	unsigned int _order;
 public:
-	virtual double GetValue(double x);
-	PolynomFunction(unsigned int order=0);
-	~PolynomFunction();
+    PolynomFunction(unsigned int order = 0);
+    ~PolynomFunction() override;
+
+    double value(double x) override;
+protected:
+    unsigned int _order;
 };
 
