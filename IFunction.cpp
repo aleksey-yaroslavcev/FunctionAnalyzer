@@ -18,22 +18,22 @@ std::size_t IFunction::values(std::vector<double>& array, double x1, double x2,
     return arraySz;
 }
 
-std::list<std::string> IFunction::params()
+QList<QString> IFunction::params()
 {
-    std::list<std::string> l;
+    QList<QString> l;
 
     for (auto it = _params.begin(); it != _params.end(); ++it)
-        l.push_back(it->first);
+        l.push_back(it.key());
 
     return l;
 }
 
-void IFunction::setParam(std::string name, double val)
+void IFunction::setParam(const QString& name, double val)
 {
     _params[name] = val;
 }
 
-std::string IFunction::description()
+QString IFunction::description()
 {
     return _description;
 }

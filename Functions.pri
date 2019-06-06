@@ -13,4 +13,7 @@ SOURCES += \
     $$PWD/LogFunction.cpp \
     $$PWD/PolynomFunction.cpp \
     $$PWD/SinFunction.cpp \
-    $$PWD/XLogXFunction.cpp
+    $$PWD/XLogXFunction.cpp \
+    $$PWD/LineFunction.cpp \
+    $$PWD/CubePolynomFunction.cpp \
+    $$PWD/SquarePolynomFuction.cpp

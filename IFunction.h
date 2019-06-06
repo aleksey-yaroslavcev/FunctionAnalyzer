@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <list>
+#include <QList>
 #include <QString>
 #include <QMap>
 
@@ -13,9 +13,9 @@ public:
     std::size_t values(std::vector<double>& array, double x1, double x2, double step);
     virtual double value(double x) = 0;
 
-    std::list<std::string> params();
-    void setParam(std::string name, double val);
-    std::string description();
+    QList<QString> params();
+    void setParam(const QString& name, double val);
+    QString description();
 
 protected:
     QMap<QString, double> _params;
