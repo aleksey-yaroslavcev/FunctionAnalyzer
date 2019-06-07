@@ -42,3 +42,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 include(Functions.pri)
+
+DISTFILES += \
+    readme.md
