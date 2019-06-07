@@ -12,6 +12,7 @@ public:
     virtual ~IFunction();
     std::size_t values(std::vector<double>& array, double x1, double x2, double step);
     virtual double value(double x) = 0;
+    QPointF point(double x);
 
     QList<QString> params();
     void setParam(const QString& name, double val);

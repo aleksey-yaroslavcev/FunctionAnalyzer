@@ -18,6 +18,11 @@ std::size_t IFunction::values(std::vector<double>& array, double x1, double x2,
     return arraySz;
 }
 
+QPointF IFunction::point(double x)
+{
+    return QPointF(x, value(x));
+}
+
 QList<QString> IFunction::params()
 {
     QList<QString> l;
