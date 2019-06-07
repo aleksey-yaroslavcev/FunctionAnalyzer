@@ -1,11 +1,12 @@
 #pragma once
 #include "IFunction.h"
 class LogFunction :
-	public IFunction
+    public IFunction
 {
 public:
-	virtual double GetValue(double x);
-	LogFunction();
-	~LogFunction();
+    LogFunction();
+    ~LogFunction() override;
+
+    double value(double x) override;
 };
 

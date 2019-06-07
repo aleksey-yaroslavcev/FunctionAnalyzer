@@ -3,14 +3,16 @@
 #include "LineFunction.h"
 #include "LogFunction.h"
 #include "PolynomFunction.h"
-class XLogXFunction :
-	public IFunction
+
+class XLogXFunction : public IFunction
 {
-	LineFunction _line;
-	LogFunction _log;
 public:
-	virtual double GetValue(double x);
-	XLogXFunction();
-	~XLogXFunction();
+    XLogXFunction();
+    ~XLogXFunction() override;
+
+    double value(double x) override;
+private:
+    LineFunction _line;
+    LogFunction _log;
 };
 

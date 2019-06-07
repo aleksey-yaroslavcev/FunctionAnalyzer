@@ -4,23 +4,41 @@
 #include <iterator>
 
 
-unsigned int IFunction::GetFunctionValues(std::vector<double>& array, double x1, double x2, double step)
-{
-	int arraySz;
+IFunction::IFunction() {}
 
-	arraySz = (x2 - x1) / step + 1;
-	array.resize(arraySz);
-	for (unsigned int i = 0; i < arraySz; ++i)
-		array[i] = GetValue(x1 + step*i);
-	return arraySz;
+IFunction::~IFunction() {}
+
+std::size_t IFunction::values(std::vector<double>& array, double x1, double x2,
+                              double step)
+{
+    auto arraySz = std::size_t((x2 - x1) / step + 1);
+    array.resize(arraySz);
+    for (unsigned int i = 0; i < arraySz; ++i)
+        array[i] = value(x1 + step * i);
+    return arraySz;
 }
 
-std::list<std::string> IFunction::GetParamsList()
+QPointF IFunction::point(double x)
 {
-	std::list<std::string> l;
+    return QPointF(x, value(x));
+}
 
-	for (auto it = _params.begin(); it != _params.end(); ++it)
-		l.push_back(it->first);
+QList<QString> IFunction::params()
+{
+    QList<QString> l;
 
-	return l;
+    for (auto it = _params.begin(); it != _params.end(); ++it)
+        l.push_back(it.key());
+
+    return l;
+}
+
+void IFunction::setParam(const QString& name, double val)
+{
+    _params[name] = val;
+}
+
+QString IFunction::description()
+{
+    return _description;
 }
