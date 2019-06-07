@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        AnalyzerChartView.cpp \
         main.cpp \
         MainWindow.cpp
 
 HEADERS += \
+        AnalyzerChartView.h \
         MainWindow.h
 
 FORMS += \

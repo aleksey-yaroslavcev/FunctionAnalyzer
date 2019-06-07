@@ -9,70 +9,71 @@ MainWindow::MainWindow(QWidget* parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    _chart = new QtCharts::QChart;
-    _chart->legend()->hide();
-
-    QtCharts::QLineSeries* series = new QtCharts::QLineSeries();
-    *series << QPointF(0, 6) << QPointF(9, 4) << QPointF(15, 20) << QPointF(25, 12) << QPointF(29, 26);
-    _chart->addSeries(series);
-
-    // Customize series
-    QPen pen(QRgb(0x000000));
-    series->setPen(pen);
-
-    // Customize chart title
-    _chart->setTitleBrush(QBrush(Qt::black));
-    _chart->setTitle("Customchart example");
-
-    QtCharts::QCategoryAxis* axisX = new QtCharts::QCategoryAxis();
-    QtCharts::QCategoryAxis* axisY = new QtCharts::QCategoryAxis();
-
-    // Customize axis label font
-    QFont labelsFont;
-    labelsFont.setPixelSize(12);
-    axisX->setLabelsFont(labelsFont);
-    axisY->setLabelsFont(labelsFont);
-
-    // Customize axis colors
-    QPen axisPen(QRgb(0xd18952));
-    axisPen.setWidth(2);
-    axisX->setLinePen(axisPen);
-    axisY->setLinePen(axisPen);
-
-    // Customize axis label colors
-    QBrush axisBrush(Qt::white);
-    axisX->setLabelsBrush(axisBrush);
-    axisY->setLabelsBrush(axisBrush);
-
-    // Customize grid lines and shades
-    axisX->setGridLineVisible(false);
-    axisY->setGridLineVisible(false);
-    axisY->setShadesPen(Qt::NoPen);
-    axisY->setShadesBrush(QBrush(QColor(0x99, 0xcc, 0xcc, 0x55)));
-    axisY->setShadesVisible(true);
-
-    axisX->append("low", 10);
-    axisX->append("optimal", 20);
-    axisX->append("high", 30);
-    axisX->setRange(0, 30);
-
-    axisY->append("slow", 10);
-    axisY->append("med", 20);
-    axisY->append("fast", 30);
-    axisY->setRange(0, 30);
-
-    _chart->addAxis(axisX, Qt::AlignBottom);
-    _chart->addAxis(axisY, Qt::AlignLeft);
-    series->attachAxis(axisX);
-    series->attachAxis(axisY);
-
-    ui->chart->setChart(_chart);
-    ui->chart->setRenderHint(QPainter::Antialiasing);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete _chart;
+    qDeleteAll(_functions);
+}
+
+void MainWindow::registerFunction(IFunction* function)
+{
+    _functions.push_back(function);
+}
+
+void MainWindow::updateFunctionComboboxes()
+{
+    ui->cobF1Type->clear();
+    ui->cobF2Type->clear();
+    for (auto function : _functions) {
+        ui->cobF1Type->addItem(function->description());
+        ui->cobF2Type->addItem(function->description());
+    }
+}
+
+void MainWindow::on_zoomInBut_clicked()
+{
+    ui->chart->qtChart()->zoomIn();
+}
+
+void MainWindow::on_zoomOutBut_clicked()
+{
+    ui->chart->qtChart()->zoomOut();
+}
+
+void MainWindow::on_scrollUpBut_clicked()
+{
+    ui->chart->qtChart()->scroll(0, 1);
+}
+
+void MainWindow::on_scrollDownBut_clicked()
+{
+    ui->chart->qtChart()->scroll(0, -1);
+}
+
+void MainWindow::on_scrollLeftBut_clicked()
+{
+    ui->chart->qtChart()->scroll(-1, 0);
+}
+
+void MainWindow::on_scrollRightBut_clicked()
+{
+    ui->chart->qtChart()->scroll(1, 0);
+}
+
+void MainWindow::on_resetBut_clicked()
+{
+    ui->chart->qtChart()->zoomReset();
+
+}
+
+void MainWindow::on_cobF1Type_activated(int index)
+{
+    ui->chart->setFirstFunction(_functions[index]);
+}
+
+void MainWindow::on_cobF2Type_activated(int index)
+{
+    ui->chart->setSecondFunction(_functions[index]);
 }
